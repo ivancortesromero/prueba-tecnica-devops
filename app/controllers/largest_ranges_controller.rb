@@ -14,12 +14,12 @@ class LargestRangesController < ApplicationController
     out_array = team.members.sort
     ranges = []
     @array_temp = []
-    out_array.each_with_index do |e, i| # e es elemento, i es la posición 
-      if i == 0
+    out_array.each_with_index do |e, index| # e es elemento, i es la posición 
+      if index == 0
         @array_temp.push(e)
-      elsif @array_temp.last + 1 == e  
+      elsif @array_temp.last.to_i + 1 == e.to_i
         @array_temp.push(e)
-        ranges.push(@array_temp) if e == out_array.last
+        ranges.push(@array_temp) if e == out_array.last.to_i
       else
         ranges.push(@array_temp)
         @array_temp = [e]

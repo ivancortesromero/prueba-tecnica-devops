@@ -86,9 +86,11 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-linux)
+    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
+    puma (5.5.0)
+      nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -141,13 +143,13 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
-  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   listen (~> 3.3)
   pg (~> 1.0)
+  puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
   spring
   tzinfo-data
@@ -156,4 +158,4 @@ RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.2.22
+   2.2.27
